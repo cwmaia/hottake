@@ -35,8 +35,8 @@ const PostCard: React.FC<PostCardProps> = ({
           </span>
         )}
         <h2 className="text-xl font-bold mb-2">
-          <Link href={`/post/${slug}`}>
-            <a className="text-blue-600 hover:underline">{title}</a>
+          <Link href={`/post/${slug}`} className="text-blue-600 hover:underline">
+            {title}
           </Link>
         </h2>
         <div

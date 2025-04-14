@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
-import PostGrid from '../../components/PostGrid';
+import PostGrid from '../components/PostGrid';
 
 const HomePage: React.FC = () => {
   const [posts, setPosts] = useState([]);
@@ -9,7 +11,8 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('https://your-wordpress-site.com/graphql', {
+        const response = await fetch('http://hottake.local/graphql'
+, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
